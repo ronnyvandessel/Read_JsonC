@@ -27,7 +27,7 @@ jobs:
               return $raw | ConvertFrom-Json
           }
 
-          $config = Get-JsoncContent "config.jsonc"
+          $config = Get-JsoncContent "params.jsonc"
 
           Write-Host "Targets R0:"
           $config.Targets_R0
