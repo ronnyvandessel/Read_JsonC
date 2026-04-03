@@ -28,10 +28,10 @@ jobs:
           }
 
           $config = Get-JsoncContent "params.jsonc"
-
+          write-host "Display Name: "  $config.Displayname
           Write-Host "Targets R0:"
           $config.Targets_R0
           $config.Targets_R1
-          $config.Displayname
+         
 
 
