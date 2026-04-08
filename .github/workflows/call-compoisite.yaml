@@ -19,3 +19,4 @@ jobs:
 
       - name: Result
         run: echo "Targets = ${{ steps.parse.outputs.targets_r0 }}"
+        run: echo "Aantal Lijnen = ${{ steps.parse.outputs.lijnen }}"
