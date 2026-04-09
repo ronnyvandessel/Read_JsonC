@@ -1,0 +1,31 @@
+# Algemene configuratie
+project:
+  name: ExampleProject
+  environment: test
+  owner: Ronny
+
+# Targets (vergelijkbaar met Targets_R0)
+targets_r0:
+  - SOFV000001
+  - SOFV000007
+  - SOFV000015
+
+# Extra instellingen
+settings:
+  retryCount: 3
+  enableFeatureX: true
+  timeoutSeconds: 120
+
+# Lijst van servers
+servers:
+  - name: server-01
+    ip: 10.0.0.10
+    role: web
+  - name: server-02
+    ip: 10.0.0.11
+    role: api
+
+# Metadata
+metadata:
+  createdBy: github-actions
+  createdAt: 2026-04-09
