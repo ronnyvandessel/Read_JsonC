@@ -37,9 +37,4 @@ jobs:
         with:
           dscfile: "DotNET_DSC 1_v4.winget"
 
-      - name: Result
-        shell: pwsh
-        run: |
-          echo "Targets = ${{ steps.parse.outputs.targets_r0 }}"
-          echo "Aantal Lijnen = ${{ steps.parse.outputs.lines_count }}"
-``
+      
