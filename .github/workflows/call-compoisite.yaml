@@ -17,6 +17,22 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: DNS test
+        shell: pwsh
+        run: |
+               
+          Write-Host "Runner OS:"
+          systeminfo | Select-String "OS Name","OS Version"
+
+          Write-Host "`nDNS resolution test:"
+          Resolve-DnsName api.winget.microsoft.com -ErrorAction Continue
+
+          Write-Host "`nConnectivity test (TCP 443):"
+          Test-NetConnection api.winget.microsoft.com -Port 443
+
+          Write-Host "`nProxy environment variables:"
+          Get-ChildItem Env: | Where-Object Name -match 'PROXY'
+
       - name: Parse config
         id: parse
         uses: RonnyVanDessel/composite_test_pws@main
