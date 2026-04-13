@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   test:
-    runs-on: generic-ci-windowsserver-latest-small
+    runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
         with:
