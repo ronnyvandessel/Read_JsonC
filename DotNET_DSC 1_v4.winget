@@ -121,13 +121,15 @@ properties:
   ########################################################################
   # Winget: Install Microsoft .NET SDK 9.0
   ########################################################################
+    
     - resource: Microsoft.WinGet.DSC/WinGetPackage
-      id: Microsoft.NETSDK9.0
+      id: sysinternals
       directives:
-        description: Install Microsoft .NET SDK 9.0
+        description: Install Sysinternals Suite
       settings:
-        id: Microsoft.DotNet.SDK.9
-        source: winget
+        id: 9P7KNL5RWT25
+        source: msstore
+
   ########################################################################
   # Winget: Install Visual Studio Enterprise 2022
   ########################################################################
