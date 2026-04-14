@@ -121,7 +121,6 @@ properties:
   ########################################################################
   # Winget: Install Microsoft .NET SDK 9.0
   ########################################################################
-    
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       id: sysinternals
       directives:
